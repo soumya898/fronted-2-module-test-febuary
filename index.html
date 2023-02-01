@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Gallary </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Images with Flex Box -->
+    <div class="flex-container">
+        <div>
+            <button id="img-1" onclick="openFormFunction()"><img class="img" src="https://i.pinimg.com/originals/ba/0e/b8/ba0eb82dbe74fb21925083c2ea7475b4.jpg" alt="img1"></button>
+        </div>
+
+        <div>
+            <button id="img-2" onclick="displayFormInfoFunction()"><img class="img" src="https://th.bing.com/th/id/R.5022fbad455b5c53695edd62f19fd72c?rik=%2bpoNhXFVuQRlAg&riu=http%3a%2f%2fclassifieds.usatoday.com%2fwp-content%2fuploads%2f2017%2f12%2fweb-developer-skills-768x512.jpeg&ehk=zi%2fS2xwbQlcS1BWHPXncUPQTd1xjTbBTvfodi28y8zk%3d&risl=&pid=ImgRaw&r=0"
+                    alt="img2"></button>
+        </div>
+
+        <div>
+            <button id="img-3" onclick="displayDiceWthScore()"><img class="img" src="https://th.bing.com/th/id/OIP.3EZojx7eqcj0EbG6-9YqLgHaI4?pid=ImgDet&w=1280&h=1536&rs=1" alt="img3"></button>
+        </div>
+
+        <div>
+            <button id="img-4" onclick="generateCouponCodeFunction()"><img class="img" src="https://th.bing.com/th/id/OIP.sKq7sqP2Q2HB75igqqqvwwHaJT?pid=ImgDet&w=1019&h=1280&rs=1"
+                    alt="img4"></button>
+        </div>
+    </div>
+
+    <!-- Form Group -->
+    <div class="form-Group hidden  form-container" id="form">
+
+        <label for="name">Name: </label>
+        <input type="text" id="name" required> 
+
+        <label for="userName">User Name: </label>
+        <input type="text" id="userName" required>
+
+        <label for="email">Email: </label>
+        <input type="email" id="email" required><br><br>
+
+        <button id="sumbitBtn" type="submit" onclick="submitFormInfoFunction()">Submit</button>
+    </div>
+
+    <!-- Display Form info -->
+    <div class="displayformInfo hidden" id="displayInfo">
+        <h2>Your information is</h2><br>
+        <span id="info"></span><br><br>
+        <p>Click on next Image to proceed further</p>
+    </div>
+
+    <!-- dice image with score and attempts -->
+    <div class="diceWthScore hidden" id="diceWthScore">
+        <p>Attempts left : <span id="attemptsLeft">0</span></p><br>
+        <div>
+            <button id="dice-Image" onclick="diceClick()"><img class="img" src="https://th.bing.com/th/id/R.04f770b84292c183ad0656ed319928e4?rik=F9wU6Dj5F9%2bZvg&riu=http%3a%2f%2fwww.clipartbest.com%2fcliparts%2f7ia%2foBj%2f7iaoBjnaT.jpeg&ehk=xi3GKRSHnv4OxUjpa6A%2fo%2fM12G628rTSrhlr%2bVNxtXw%3d&risl=&pid=ImgRaw&r=0/"
+                    alt="diceImage" ></button><br><br>
+            <p>Remaining Dice Clicks: <span id="diceClicks">3</span></p>
+            <p>Your total score is: <span id="score">0</span></p>
+        </div>
+    </div>
+
+    <!-- Congratulations and try again Image -->
+    <div>
+        <img class="hidden" id="congratsImage" src="https://th.bing.com/th/id/R.0b36abd741f94b3b787dd21d4359f8a2?rik=edZvthAeAEBfKA&riu=http%3a%2f%2fanimatedimagepic.com%2fimage%2fcongratulations%2fcongratulations-6341.gif&ehk=Jf8V7NowBUBaVHHPLkdMHSVa5tRPvSLkunIO7AxNrgo%3d&risl=&pid=ImgRaw&r=0">
+    <div>
+        <img class="hidden" id="tryAgainImage" src="https://th.bing.com/th/id/OIP.zN65ze1QsYGoga18EONC_wHaEP?pid=ImgDet&rs=1" alt="tryAgainImage">
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
